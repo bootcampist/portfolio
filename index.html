@@ -5,41 +5,136 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <title>Bootcampist // Web Developer</title>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-  <!-- main logo / nav -->
-  <header>
-    <h1>Lernantino</h1>
-    <nav>
-    </nav>
-  </header>
+  <div id="container">
+    <!-- main logo / nav -->
+    <header>
+      
+      <nav id="nav">
+        <h1 class="nav-links"></h1>
+        <ul class="nav-links">
+          <li id="about-link">
+            <a href="#about"><span>About</span></a>
+          </li>
+          <li id="work-link">
+            <a href="#work"><span>Work</span></a>
+          </li>
+          <li id="contact-link">
+            <a href="#contact"><span>Contact</span></a>
+          </li>
+        </ul>
+      </nav>
 
-  <!-- hero banner -->
-  <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
-    </div>
-  </section>
+      <section class="hero-banner">
+        <div class="hero-text">
+          <h2><span id="hero-text-one">初めまして。</span></h2>
+          <h2><span id="hero-text-two" class="larger-text">ニコルと</span></h2>
+          <h2><span id="hero-text-three">申 し ま す。</span></h2>
+        </div>
+      </section>
+    </header>
 
-  <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
-    </section>
+    <!-- hero banner -->
+   
 
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
-    </section>
+    <main class="page-wrapper">
+      <!-- about me -->
+      <section class="page-section" id="about">
+            <div class="about-container">
+              <div class="about-text">
+                <h2>About Me</h2>
+                <span class="about-body-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officia praesentium quod rerum aliquam! Impedit sapiente aliquid vitae deleniti exercitationem enim deserunt labore itaque ducimus assumenda dicta quae illo incidunt asperiores commodi, perspiciatis, ipsam iure. Consequatur eveniet rerum numquam voluptatibus, aspernatur quod, illum sed enim impedit quidem atque aliquid magni.
+                  </span>
+              </div>
+            </div>
+            <div class="about-decoration">
+              <div class="about-decoration-one">
+                自 己
+              </div>
+              <div class="about-decoration-two">
+                紹 介
+              </div>
+            </div>
+      </section>
 
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-    </section>
-  </main>
+      <!-- portfolio container -->
+      <section class="page-section" id="work">
+        <h2>Work</h2>
+        <div class="work-decoration">
+          作品集
+        </div>
+        <div id="work-grid">
+          <div id="website-one" class="website-grid">
+            <div id="website-one-title" class="website-title">
+              Website One
+            </div>
+          </div>
+
+          <div id="website-two" class="website-grid">
+            <div id="website-two-title" class="website-title">
+              Website Two
+            </div>
+          </div>
+
+          <div id="website-three" class="website-grid">
+            <div id="website-three-title" class="website-title">
+              Website Three
+            </div>
+          </div>
+
+          <div id="website-four" class="website-grid">
+            <div id="website-four-title" class="website-title">
+              Website Four
+            </div>
+          </div>
+
+          <div id="website-five" class="website-grid">
+            <div id="website-five-title" class="website-title">
+              Website Five
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section class="page-section contact" id="contact">
+                <div class="contact-container">
+                  <div class="contact-header">
+                    <h2>Contact Me</h2>
+                    <div class="contact-decoration">
+                      連 絡
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-card-container">
+                  <div class="contact-card">
+                    <div id="contact-card-space"></div>
+                    <div id="contact-details">
+                      <div class="card-header">
+                        <h2>Nicole</h2>
+                        <h3>Front-End</h3> 
+                          <h4>Web Developer</h4>
+                      </div>
+                      <ul class="contact-details-list">
+                        <li><a href="mailto:email@email.com">email@email.com</a></li>
+                        <li><a href="index.html">www.website.com</a></li>
+                        <li>01234 567890</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>

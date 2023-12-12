@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  --white: #fff;
+  --light-blue: #8FAADC;
+  --dark-blue: #2F5597;
+  --darkest-blue: #2C4E8C;
 }
 
 body {
@@ -7,6 +12,57 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+}
+
+header {
+  height: 100vh;
+  background-image: url('../images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 20px;
+}
+
+.nav-links li {
+  color: var(--white);
+  text-decoration: none;
+  display: inline-block;
+  width:80px;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size:20px;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+a:hover {
+  padding-bottom: 5px;
+  border-bottom: var(--white) solid 5px;  
+}
+
+#about-link a:hover span, #contact-link a:hover span, #work-link a:hover span {
+  display:none;
+}
+
+#about-link a:hover:before {
+  content: "自己紹介";
+}
+
+#work-link a:hover:before {
+  content: "作品集";
+}
+
+#contact-link a:hover:before {
+  content: "連絡先";
 }
 
 h1,
@@ -21,3 +77,384 @@ h6 {
 p {
   margin: 0;
 }
+
+.hero-text {
+  position: static;
+  color: var(--white);
+  text-align: justify;
+  padding: 10px 30px;
+
+}
+.hero-text h2 {
+  font-size: 40px;
+}
+.larger-text {
+  font-size:60px;
+
+}
+
+
+.page-section {
+  color: var(--light-blue);
+}
+
+/*About Section*/
+
+#about {
+  height: 100vh;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container, .about-decoration {
+  width: 50vw;
+  
+}
+
+.about-text {
+  
+  width: 50vw;
+  padding: 0 30px;
+  text-align: justify;
+}
+
+.about-text h2{
+  text-align: center;
+  font-size: 5vw;
+  margin-bottom: 30px;
+
+}
+
+.about-decoration {
+  font-size:150px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #EBF0F9;
+  text-align: center;
+}
+
+/* Portfolio Section */
+
+#work {
+  height: 100vh;
+  background-color:var(--light-blue);
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+#work h2 {
+  font-size: 80px;
+  color: var(--dark-blue);
+  text-align: right;
+  display: block;
+  width: 79vw;
+  margin-bottom: -20px;
+}
+
+.work-decoration {
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+  display: none;
+}
+
+#work-grid {
+  height: 70vh;
+  width: 80vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "website-one website-one website-two website-three"
+  "website-four website-five website-five website-three" 
+}
+
+#website-one {
+  grid-area: website-one;
+  background-image: url('../images/02-portfolio-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#website-two {
+  grid-area: website-two;
+  background-image: url('../images/02-portfolio-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#website-three {
+  grid-area: website-three;
+  background-image: url('../images/02-portfolio-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#website-four {
+  grid-area: website-four;
+  background-image: url('../images/02-portfolio-4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#website-five  {
+  grid-area: website-five;
+  background-image: url('../images/02-hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.website-grid {
+  display: flex;
+  align-items: flex-end;
+  margin: 5px;
+}
+
+.website-grid:hover {
+  filter: brightness(40%);
+  .website-title {
+    background-color: #4472C4;
+    color: var(--white);
+    }  
+}
+
+.website-title {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.website-title:hover {
+background-color: #4472C4;
+}
+
+/* Contact Section */
+#contact {
+  height: 100vh;
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  width: 40vw; 
+}
+
+.contact-card-container {
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-header h2{
+  text-align: center;
+  font-size: 80px;
+}
+
+.contact-decoration {
+  font-size: 145px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--darkest-blue);
+  text-align: center;
+}
+
+.contact-card-container {
+  font-size: 4vh;
+  color: var(--darkest-blue);
+  text-align: center;
+}
+ 
+.contact-card {
+  height: 50vh;
+  width: 80vh;
+  background-color: var(--light-blue);
+  background-image: url('../images/business-card.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px var(--darkest-blue);
+  display: flex;
+  overflow: hidden;
+}
+
+#contact-card-space {
+  width: 35vh;
+}
+
+#contact-details {
+  width: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-details li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#contact-details a {
+  color: var(--darkest-blue);
+}
+
+#contact-details a:hover {
+  color: var(--light-blue);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+@media screen and (min-width: 915px) and (max-width: 1130px) {
+  .contact-card {
+    background-image: url(../images/business-card-2.png);
+  }
+
+  header {
+    height: 70vh;
+    background-size: auto;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  header {
+    height: 50vh;
+  }
+
+  .about-text h2{
+    font-size: 8vw;  
+  }
+  .contact-card {
+    background-image: url(../images/business-card-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 90vw;
+  }
+
+  #contact-card-space, .contact-decoration {
+    display: none;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+
+  .contact-container, .contact-card-container {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .about-container {
+    width: 100vw;
+  }
+
+  .about-text {
+    width: 100vw;
+  }
+
+  .about-text h2{
+    font-size: 80px;  
+  }
+  .about-decoration {
+    display: none;
+  }
+
+  #work {
+    height: 250vh;
+  }
+
+  #work h2 {
+    text-align: center;
+  }
+
+  #work-grid {
+    height: 220vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "website-one"
+    "website-two" 
+    "website-three"
+    "website-four" 
+    "website-five"
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  #nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+    
+  }
+
+  .nav-links li {
+    display: inline;
+    width: 60vw;
+    text-align: center;
+    margin-left: 5vw;
+    font-size: 6vw;
+  }
+
+  .nav-links h1 {
+    display: none;
+  }
+  .about-text h2, .contact-header h2{
+    font-size: 15vw; 
+  }
+  .contact-card {
+    box-shadow: none;
+  }
+
+  .card-header h2 {
+    font-size: 10vw;
+  }
+
+  .card-header h3 {
+    font-size: 8vw;
+  }
+
+  .card-header h4 {
+    font-size: 6vw;
+  }
+
+  .contact-details-list {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .hero-text h2 {
+    font-size: 2vh;
+  }
+  .larger-text {
+    font-size: 4vh;
+  }
+
+}
+@media screen and (max-width: 250px) {
+  #work h2 {
+    font-size: 15vw; 
+    margin-bottom: 0;
+  }
+
+  .about-body-text {
+    font-size: 6vw;
+  }
+}
+
+
+
+
+
+
+
